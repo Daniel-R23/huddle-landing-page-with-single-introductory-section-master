@@ -16,13 +16,150 @@
       --magenta-claro: hsl(300, 69%, 71%);
       margin:0;
       padding:0;
-      box-sizing: border-box;
     }
     body{
       font:normal 400 16px 'Open Sans';
+      color: white;
+      background:url('images/bg-desktop.svg'),var(--violeta);
+      background-repeat:no-repeat;
+      width: 100vw;
+      height: 100vh;
+    }
+    #principal{
+      display: flex;
+    }
+    header, main{
+      display:flex;
+      flex-wrap: wrap;
+      width: 50vw;
     }
     header{
-      font:normal 600 1.3em 'Poppins';
+      margin:8vh 0 0 10vh
+    }
+    #logo{
+      width: 15vw;
+    }
+    #mockup{
+      margin-top:9vh;
+      width:50vw;
+    }
+    main{
+      align-content: space-between;
+      justify-content: flex-start;
+      margin:17vh 8vh 0 5vw;
+      height: 50vh;
+    }
+    main>h1{
+      font: normal 600 2.5em 'Poppins';
+      margin-top:12vh;
+    }
+    main>p{
+      font-size:1.1em;
+      color:#f2f2f2;
+    }
+    main>button{
+      padding:15px 60px;
+      border:none;
+      border-radius:30px;
+      background-color:white;
+      color:var(--violeta);
+      box-shadow: 3px 3px 5px 3px rgba(0,0,0,0.3);
+      font:normal 400 1.1em 'Poppins';
+      cursor:pointer;
+      transition:0.3s ease
+    }
+    main>button:hover{
+      background-color: var(--magenta-claro);
+      color:white;
+    }
+    footer{
+      padding: 2vh 5vw 0 6vw;
+      max-width: 100vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #icons>img{
+      max-width: 4vw;
+      filter:invert(1);
+      cursor: pointer;
+    }
+    #icons>img:nth-last-child(1){
+      width: 3vw;
+      padding-bottom:1vh;
+      padding-left: 0.5vw;
+    }
+    footer>p{
+      color:white;
+      font-size: 1.2em;
+    }
+    footer>p>a{
+      color:var(--magenta-claro);
+      text-decoration: none;
+    }
+    @media screen and (max-width:750px){
+      body{
+        background:url('images/bg-mobile.svg'), var(--violeta);
+        background-repeat: no-repeat;
+        background-size: 100%
+      }
+      #principal{
+        flex-wrap: wrap;
+      }
+      header,main{
+        width: 100vw;
+        flex-flow: column;
+      }
+      header{
+        flex-wrap: wrap;
+        margin:4vh 0 0 5vh;
+        align-items: flex-start;
+      }
+      #logo{
+        width:35vw;
+        height: 70px;
+      }
+      #mockup{
+        margin-top:7vh;
+        width:77vw
+      }
+      main{
+        margin:5vh 4vh 0 4vh;
+        height: 40vh;
+        align-items: center;
+        justify-content: space-around;
+      }
+      main>h1{
+        text-align: center;
+        font-size: 3em;
+        margin:0;
+      }
+      main>p{
+        font-size: 2em;
+        text-align: center;
+        padding:0 10px;
+        line-height: 1.5;
+      }
+      main>button{
+        padding:20px 170px;
+        font-size: 2em;
+        border-radius: 60px;
+      }
+      footer{
+        flex-flow: column-reverse;
+        padding: 4vh 0 0 0;
+      }
+      #icons>img{
+        max-width: 11vw;
+      }
+      #icons>img:nth-last-child(1){
+        width: 8vw;
+        padding-bottom:0.7vh;
+        padding-left: 0.7vw;
+      }
+      footer>p{
+        margin-top:1vh
+      }
     }
   </style>
 </head>
